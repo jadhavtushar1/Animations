@@ -1,0 +1,19 @@
+.circle-parent{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle-main-container{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border:4px solid #2c423d;
+    background-color: #689489;
+    transition: 1s ease-in , transform 2s ease-out;
+
+}
+.circle-main-container:hover{
+    background-color: #406159;
+    border:10px solid #15211e;
+    transform: rotate(360deg);
+}
