@@ -1,0 +1,89 @@
+.parent-movements{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.sky{
+    height: 40%;
+    background-color: #6fb3de;
+    z-index: -2;
+    overflow: hidden;
+    width: 100vw;
+}
+.garden{
+    height: 30%;
+    background-color: #18de33;
+}
+.road{
+    height: 30%;
+    background-color: #828282;
+    position: relative;
+}
+.line{
+    border: 5px dashed #bdbfbe;
+    margin: 0px;
+    position: absolute;
+    
+    top: 50%;
+    width: -webkit-fill-available;
+    
+}
+.mario{
+    position: absolute;
+    left: 0px;
+    top: -60px;
+    animation-name: driveAnimation  ;
+    animation-duration: 6s;
+    animation-fill-mode:both ;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in;
+    
+    
+}
+.luigi{
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    animation: driveAnimation ;
+    animation-duration: 10s;
+    animation-fill-mode:both ;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+
+
+}
+@keyframes driveAnimation {
+    from{ transform: translateX(-150px);}
+    to{transform: translateX(103vw);}
+}
+@keyframes driveAnimationcloud {
+    from{ transform: translateX(-700px);}
+    to{transform: translateX(110vw);}
+}
+.cloud{
+    position: absolute;
+    left: 0;
+    animation: driveAnimationcloud;
+    animation-duration: 20s;
+    animation-fill-mode:both ;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.sky :nth-child(1){
+    width: 150px;
+
+}
+.sky :nth-child(2){
+    width: 400px;
+    margin-left: 200px;
+}
+.sky :nth-child(3){
+    width: 300px;
+    opacity: 0.5;
+    margin-top: 50px;
+    
+  
+}
